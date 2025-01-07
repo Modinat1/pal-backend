@@ -6,7 +6,8 @@ const app = express();
 const cors = require("cors");
 app.use(express.json()); 
 
-app.use(cors({ origin: "http://localhost:3000" })); // Replace with your frontend's URL
+app.use(cors({ origin: "*" }));
+// app.use(cors({ origin: "http://localhost:3000" }));
 
 
 const PAYSTACK_SECRET_KEY = process.env.PAYSTACK_SECRET_KEY;
